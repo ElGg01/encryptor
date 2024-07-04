@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/index.css" />
+    <title>Encriptador</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <img src="assets/alura.png" alt="Logo Alura" />
+      </nav>
+    </header>
+    <main>
+      <section>
+        <textarea
+          id="data-text"
+          placeholder="Ingrese el texto aqui..."
+          maxlength="300"
+        ></textarea>
+        <div class="warning">
+          <img src="assets/Advertencia.png" alt="" />
+          <p>Solo letras minúsculas y sin acentos. Máximo 300 letras.</p>
+        </div>
+        <div class="buttons">
+          <button onclick="encrypt(textArea.value, pattern)">Encriptar</button>
+          <button onclick="decrypt(textArea.value, reversePattern)">
+            Desencriptar
+          </button>
+        </div>
+      </section>
+      <section>
+        <div class="card">
+          <div id="card-content">
+            <img src="assets/Muñeco.png" alt="" />
+            <h2><strong>Ningún mensaje fue encontrado</strong></h2>
+            <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>
+        Proyecto desarrollado por <a href="https://github.com/ElGg01">ElGg01</a>
+      </p>
+      <p>Hecho para el curso de <span>Oracle</span> + Alura Latam</p>
+    </footer>
+    <script src="js/index.js"></script>
+  </body>
+</html>

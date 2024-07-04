@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    --primary-color: #8db7fb;
+    --secondary-color: #fff;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #0a3571 #8db7fb;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #8db7fb;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #0a3571;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--primary-color);
+    font-family: "Inter", sans-serif;
+}
+
+header {
+    padding: 2rem 0 1rem 4rem;
+}
+
+nav {
+    display: flex;
+}
+
+main {
+    padding: 1rem 1rem 1rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+section:nth-child(1) {
+    flex-basis: 50%;
+}
+
+section:nth-child(2) {
+    flex-basis: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    background-color: var(--secondary-color);
+    padding: 2rem;
+    height: 80vh;
+    width: 80%;
+    max-width: 650px;
+    border-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card p {
+    width: 100%;
+    word-wrap: break-word;
+}
+
+.card img {
+    width: 70%;
+}
+
+textarea {
+    width: 100%;
+    height: 60vh;
+    
+    resize: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 2rem;
+}
+
+textarea::placeholder {
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
+    color: #0A3871;
+}
+
+.warning {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1em;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.buttons button {
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    width: 50%;
+    background-color: #0A3871;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.buttons button:disabled,
+.buttons button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+  cursor: default;
+}
+
+#card-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+.copy-button {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background-color: #fff;
+    border: 2px solid #0A3871;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+    background-color: #0A3871;
+    color: #fff;
+}
+
+footer a {
+    color: var(--primary-color);
+}
+
+
+@media screen and (max-width: 1140px){
+    header {
+        padding: 1rem;
+    }
+    .card {
+        height: auto;
+        width: 100%;
+    }
+    .card img{
+        display: none;
+    }
+    section:nth-child(1) {
+        flex-basis: 100%;
+    }
+    section:nth-child(2) {
+        flex-basis: 100%;
+        justify-content: center;
+    }
+    textarea {
+        height: 50vh;
+        resize: none;
+    }
+    main {
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .buttons {
+        flex-wrap: wrap;
+    }
+    .buttons button {
+        padding: 1rem;
+    }
+    textarea {
+        height: 40vh;
+        resize: none;
+    }
+}

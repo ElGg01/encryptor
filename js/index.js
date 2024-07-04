@@ -15,6 +15,14 @@ function updateResult() {
 
 textArea.addEventListener('keyup', updateResult);
 
+function validateText(text){
+    let pattern = /^[a-zñ\s]+$/;
+
+    if (pattern.test(text)) return !true
+    window.alert("Mensaje no valido, debe contener al menos 1 letra y sin mayúsculas o acentos.")
+    return !false
+}
+
 let pattern = {
     a: "ai",
     e: "enter",
@@ -34,7 +42,7 @@ function reverseObject(obj){
 reversePattern = reverseObject(pattern);
 
 function encrypt(text, pattern) {
-    if(text == "") return
+    if(validateText(text)) return
 
     let characters = [...text]
     let encryptedText = ""
@@ -54,7 +62,7 @@ function encrypt(text, pattern) {
 }
 
 function decrypt(text, pattern) {
-    if(text == "") return
+    if(validateText(text)) return
 
     for(key in pattern){
         while (text.includes(key)) {

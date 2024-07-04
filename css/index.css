@@ -3,13 +3,14 @@
 :root {
     --primary-color: #8db7fb;
     --secondary-color: #fff;
+    --tertiary-color: #0a3571;
 }
 
 /* ===== Scrollbar CSS ===== */
 /* Firefox */
 * {
     scrollbar-width: auto;
-    scrollbar-color: #0a3571 #8db7fb;
+    scrollbar-color: var(--tertiary-color) var(--primary-color);
 }
 
 /* Chrome, Edge, and Safari */
@@ -18,13 +19,13 @@
 }
 
 *::-webkit-scrollbar-track {
-    background: #8db7fb;
+    background: var(--primary-color);
 }
 
 *::-webkit-scrollbar-thumb {
-    background-color: #0a3571;
+    background-color: var(--tertiary-color);
     border-radius: 10px;
-    border: 3px solid #ffffff;
+    border: 3px solid var(--secondary-color);
 }
 
 * {
@@ -103,7 +104,7 @@ textarea {
 textarea::placeholder {
     font-family: "Inter", sans-serif;
     font-weight: bold;
-    color: #0A3871;
+    color: var(--tertiary-color);
 }
 
 .warning {
@@ -123,10 +124,23 @@ textarea::placeholder {
     border-radius: 1.5rem;
     padding: 1.5rem;
     width: 50%;
-    background-color: #0A3871;
-    color: white;
+    background-color: var(--tertiary-color);
+    color: var(--secondary-color);
     border: none;
     cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.buttons button:hover {
+    background-color: black;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: all 0.2s ease-in-out;
+}
+
+.buttons button:active {
+    background-color: white;
+    color: black;
+    transition: all 0.2s ease-in-out;
 }
 
 .buttons button:disabled,
@@ -152,8 +166,8 @@ textarea::placeholder {
     display: block;
     width: 100%;
     padding: 1rem;
-    background-color: #fff;
-    border: 2px solid #0A3871;
+    background-color: var(--secondary-color);
+    border: 2px solid var(--tertiary-color);
     border-radius: 1rem;
     cursor: pointer;
 }
@@ -165,8 +179,8 @@ footer {
     align-items: center;
     gap: 1rem;
     padding: 2rem;
-    background-color: #0A3871;
-    color: #fff;
+    background-color: var(--tertiary-color);
+    color: var(--secondary-color);
 }
 
 footer a {

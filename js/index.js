@@ -59,6 +59,8 @@ function encrypt(text, pattern) {
     cardContent.innerHTML += `<h2>Texto encriptado:</h2>`;
     cardContent.innerHTML += `<p>${encryptedText}</p>`;
     cardContent.innerHTML += `<button class="copy-button" onclick='copyToClipboard("${encryptedText}")'>Copiar</button>`;
+
+    textArea.value = ""
 }
 
 function decrypt(text, pattern) {
@@ -74,6 +76,8 @@ function decrypt(text, pattern) {
     cardContent.innerHTML += `<h2>Texto desencriptado:</h2>`;
     cardContent.innerHTML += `<p>${text}</p>`;
     cardContent.innerHTML += `<button class="copy-button" onclick='copyToClipboard("${text}")'>Copiar</button>`;
+
+    textArea.value = ""
 }
 
 async function copyToClipboard(text) {

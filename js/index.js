@@ -5,7 +5,7 @@ const emptyCard = cardContent.innerHTML;
 
 function updateResult() {
     if (textArea.value != "") {
-        console.log(textArea.value);
+        //console.log(textArea.value);
         cardContent.innerHTML = '<img src="assets/writting.gif" alt="" />'
         cardContent.innerHTML += "<h2>Escribiendo...</h2>"
     } else {
@@ -60,9 +60,9 @@ function encrypt(text, pattern) {
     cardContent.innerHTML += `<p>${encryptedText}</p>`;
     cardContent.innerHTML += `<button class="copy-button" onclick='copyToClipboard("${encryptedText}")'>Copiar</button>`;
 
-    console.log(textArea.value)
+    //console.log(textArea.value)
     textArea.value = ""
-    console.log(textArea.value)
+    //console.log(textArea.value)
 }
 
 function decrypt(text, pattern) {
@@ -79,9 +79,9 @@ function decrypt(text, pattern) {
     cardContent.innerHTML += `<p>${text}</p>`;
     cardContent.innerHTML += `<button class="copy-button" onclick='copyToClipboard("${text}")'>Copiar</button>`;
 
-    console.log(textArea.value)
+    //console.log(textArea.value)
     textArea.value = ""
-    console.log(textArea.value)
+    //console.log(textArea.value)
 }
 
 async function copyToClipboard(text) {
